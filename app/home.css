@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+.carrinho{
+    font-size: 20px;
+    margin: 20px;
+}
+
+.produto{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+}
+
+.espacamento{
+    display: flex;
+}
+
+.menu{
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+.posicaoCarrinho{
+    text-align: right;
+}
