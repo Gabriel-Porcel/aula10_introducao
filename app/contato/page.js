@@ -7,7 +7,7 @@ export default function Contato(){
 
     const[name, setName] = useState()
     const[message, setMessage] = useState()
-
+    // Testando um teste com uma testada
     const notifySuccess = () => toast.success("Mensagem enviada com sucesso!", {
         position: "top-right",
         autoClose: 5000,
