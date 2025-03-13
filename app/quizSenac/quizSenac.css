@@ -27,10 +27,20 @@ h2{
 
 .opcao{
     padding: 15px;
-    border-radius: 5px;
-    text-align: end;
+    margin: 20px;
 }
 
 .alinha-imagem{
     text-align: center;
 }
+
+.container{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 20px 30px;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
