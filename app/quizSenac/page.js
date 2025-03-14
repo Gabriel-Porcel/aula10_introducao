@@ -369,10 +369,10 @@ function QuizSenac() {
                     <button name="p8" className={selecionado[0]} onClick={() => { setP8(1); setSelecionado(["selecionado", "", "", ""]) }}> Cubone </button>
                 </div>
                 <div className="opcao">
-                    <button name="p8" className={selecionado[1]} onClick={() => { setP8(0); setSelecionado(["", "selecionado", "", ""]) }}> Bulbassauro </button>
+                    <button name="p8" className={selecionado[1]} onClick={() => { setP8(0); setSelecionado(["", "selecionado", "", ""]) }}> Cubchoo </button>
                 </div>
                 <div className="opcao">
-                    <button name="p8" className={selecionado[2]} onClick={() => { setP8(0); setSelecionado(["", "", "selecionado", ""]) }}> Gibble </button>
+                    <button name="p8" className={selecionado[2]} onClick={() => { setP8(0); setSelecionado(["", "", "selecionado", ""]) }}> Cursola </button>
                 </div>
                 <div className="opcao">
                     <button name="p8" className={selecionado[3]} onClick={() => { setP8(0); setSelecionado(["", "", "", "selecionado"]) }}> Marowak </button>
