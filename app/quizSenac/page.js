@@ -12,6 +12,7 @@ function QuizSenac() {
     const [p6, setP6] = useState(0)
     const [p7, setP7] = useState(0)
     const [p8, setP8] = useState(0)
+    const [p9, setP9] = useState(0)
 
     const [selecionado, setSelecionado] = useState(["", "", "", ""])
 
@@ -23,6 +24,7 @@ function QuizSenac() {
     const [showP6, setShowP6] = useState(false)
     const [showP7, setShowP7] = useState(false)
     const [showP8, setShowP8] = useState(false)
+    const [showP9, setShowP9] = useState(false)
 
     const [showImagem1, setShowImagem1] = useState(false)
     const [showImagem2, setShowImagem2] = useState(false)
@@ -32,6 +34,7 @@ function QuizSenac() {
     const [showImagem6, setShowImagem6] = useState(false)
     const [showImagem7, setShowImagem7] = useState(false)
     const [showImagem8, setShowImagem8] = useState(false)
+    const [showImagem9, setShowImagem9] = useState(false)
 
     const[inicio, setInicio] = useState(true)
 
@@ -42,7 +45,7 @@ function QuizSenac() {
     
     function pontuacao() {
 
-        setScore(p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8)
+        setScore(p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9)
 
 
     }
@@ -393,21 +396,59 @@ function QuizSenac() {
                 <h3>Cubone</h3>
                 <img className="pok" src="/imagens/cubone.png" />
                 <div>
-                    <button className="enviar" onClick={() => { setShowImagem8(false); setShowP8(false); setShowScore(true); pontuacao()}}>Próximo</button>
+                    <button className="enviar" onClick={() => { setShowImagem8(false); setShowP8(false); setShowP9(true) ;setShowImagemP9(false); audio.play()}}>Próximo</button>
                 </div>
             </div>}
 
 
+
+            {showP9 == true && showImagem9 == false &&
+            
+            <div className="alinha-imagem">
+            <img className="pok" src="/imagens/suicune-s.png" />
+            <img src="/imagens/quizhead1.png" width="700px" />
+            <br />
+
+            <div className="container">
+                <div className="opcao">
+                    <button name="p9" className={selecionado[0]} onClick={() => { setP9(0); setSelecionado(["selecionado", "", "", ""]) }}> Houndoom </button>
+                </div>
+                <div className="opcao">
+                    <button name="p9" className={selecionado[1]} onClick={() => { setP9(0); setSelecionado(["", "selecionado", "", ""]) }}> Entei </button>
+                </div>
+                <div className="opcao">
+                    <button name="p9" className={selecionado[2]} onClick={() => { setP9(1); setSelecionado(["", "", "selecionado", ""]) }}> Suicune </button>
+                </div>
+                <div className="opcao">
+                    <button name="p9" className={selecionado[3]} onClick={() => { setP9(0); setSelecionado(["", "", "", "selecionado"]) }}> Raikou </button>
+                </div>
+                <br />
+
+            </div>
+
+            <button className="enviar" onClick={() => { setShowImagem9(true) }}>Enviar</button>
+        </div>
+
+}
+
+
+            {showP9 == true && showImagem9 == true &&
+
+            <div className="alinha-imagem">
+                <h3>Suicune</h3>
+                <img className="pok" src="/imagens/suicune.png" />
+                <div>
+                    <button className="enviar" onClick={() => { setShowImagem9(false); setShowP9(false); setShowScore(true); pontuacao()}}>Próximo</button>
+                </div>
+            </div>}
+            
             {showScore == true &&
                 <div>
                     <h1>Qual é esse POKÉMON?</h1>
-                    <h2>Pontuação: {score}/8</h2>
+                    <h2>Pontuação: {score}/9</h2>
                 </div>
-
-            }
-
-
             
+            }
 
         </div>
     );
