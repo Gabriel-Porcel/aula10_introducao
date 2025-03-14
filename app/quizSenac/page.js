@@ -40,8 +40,6 @@ function QuizSenac() {
 
     const [showScore, setShowScore] = useState(false)
     const [score, setScore] = useState(0)
-
-    const [audio, alteraAudio] = useState(new Audio('/audios/quem-e-esse-pokemon-011.mp3'))
     
     function pontuacao() {
 
@@ -61,7 +59,7 @@ function QuizSenac() {
             <div className="inicio" >
                 
                 <h2>Qual é esse POKÉMON?</h2>
-                <button className="container" onClick={()=> {setShowP1(false); audio.play(); setInicio(false) }}>Começar</button>
+                <button className="container" onClick={()=> {setShowP1(false); setInicio(false) }}>Começar</button>
             </div>
         }
 
@@ -110,7 +108,7 @@ function QuizSenac() {
                     <h3>Charmander</h3>
                     <img className="pok" src="/imagens/charmander.png" />
                     <div>
-                        <button className="enviar" onClick={() => { setShowImagem1(false); setShowP1(true); setShowP2(true); setShowImagem2(false); audio.play(); }}>Próximo</button>
+                        <button className="enviar" onClick={() => { setShowImagem1(false); setShowP1(true); setShowP2(true); setShowImagem2(false); }}>Próximo</button>
                     </div>
                 </div>
 
@@ -152,7 +150,7 @@ function QuizSenac() {
                     <h3>Mimikyu</h3>
                     <img className="pok" src="/imagens/mimikyu-s.png" />
                     <div>
-                        <button className="enviar" onClick={() => { setShowImagem2(false); setShowP2(false); setShowP3(true); setShowImagem3(false); audio.play() }}>Próximo</button>
+                        <button className="enviar" onClick={() => { setShowImagem2(false); setShowP2(false); setShowP3(true); setShowImagem3(false);}}>Próximo</button>
                     </div>
                 </div>
 
@@ -193,7 +191,7 @@ function QuizSenac() {
                     <h3>Jolteon</h3>
                     <img className="pok" src="/imagens/jolteon.png" />
                     <div>
-                        <button className="enviar" onClick={() => { setShowImagem3(false); setShowP3(false); setShowP4(true); setShowImagem4(false); audio.play() }}>Próximo</button>
+                        <button className="enviar" onClick={() => { setShowImagem3(false); setShowP3(false); setShowP4(true); setShowImagem4(false);}}>Próximo</button>
                     </div>
                 </div>
 
@@ -233,7 +231,7 @@ function QuizSenac() {
                     <h3>Scyther</h3>
                     <img className="pok" src="/imagens/scyther.png" />
                     <div>
-                        <button className="enviar" onClick={() => { setShowImagem4(false); setShowP4(false); setShowP5(true); setShowImagem5(false); audio.play() }}>Próximo</button>
+                        <button className="enviar" onClick={() => { setShowImagem4(false); setShowP4(false); setShowP5(true); setShowImagem5(false);}}>Próximo</button>
                     </div>
                 </div>
 
@@ -273,7 +271,7 @@ function QuizSenac() {
                     <h3>Pikachu</h3>
                     <img className="pok" src="/imagens/pikachu.png" />
                     <div>
-                        <button className="enviar" onClick={() => { setShowImagem5(false); setShowP5(false); setShowP6(true); setShowImagem6(false); audio.play() }}>Próximo</button>
+                        <button className="enviar" onClick={() => { setShowImagem5(false); setShowP5(false); setShowP6(true); setShowImagem6(false);}}>Próximo</button>
                     </div>
                 </div>
 
@@ -313,7 +311,7 @@ function QuizSenac() {
                     <h3>Voltorb</h3>
                     <img className="pok" src="/imagens/Voltorb.png" />
                     <div>
-                        <button className="enviar" onClick={() => { setShowImagem6(false); setShowP6(false); setShowP7(true); setShowImagem7(false); audio.play() }}>Próximo</button>
+                        <button className="enviar" onClick={() => { setShowImagem6(false); setShowP6(false); setShowP7(true); setShowImagem7(false);}}>Próximo</button>
                     </div>
                 </div>
 
@@ -353,7 +351,7 @@ function QuizSenac() {
                     <h3>Zekrom</h3>
                     <img className="pok" src="/imagens/zekrom.png" />
                     <div>
-                        <button className="enviar" onClick={() => { setShowImagem7(false); setShowP7(false); setShowP8(true) ;setShowImagem8(false); audio.play() }}>Próximo</button>
+                        <button className="enviar" onClick={() => { setShowImagem7(false); setShowP7(false); setShowP8(true) ;setShowImagem8(false);}}>Próximo</button>
                     </div>
                 </div>
 
@@ -396,7 +394,7 @@ function QuizSenac() {
                 <h3>Cubone</h3>
                 <img className="pok" src="/imagens/cubone.png" />
                 <div>
-                    <button className="enviar" onClick={() => { setShowImagem8(false); setShowP8(false); setShowP9(true) ;setShowImagemP9(false); audio.play()}}>Próximo</button>
+                    <button className="enviar" onClick={() => { setShowImagem8(false); setShowP8(false); setShowP9(true) ;setShowImagemP9(false);}}>Próximo</button>
                 </div>
             </div>}
 
