@@ -3,7 +3,8 @@
 
 
 body{
-    background-color: red;
+    background: rgb(255,101,25);
+    background: linear-gradient(90deg, rgba(255,101,25,1) 0%, rgba(255,42,10,1) 35%, rgba(254,16,16,1) 100%);
     font-family: 'Pokemon Solid', sans-serif;
     letter-spacing: 5px;
     padding: 0px;
@@ -59,8 +60,12 @@ h3{
 }
 
 .enviar{
-    background-color: white;
-    padding: 5px;
+    background-color: #3A5CA4;
+    color: #FFC905;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
     box-shadow: none;
 
 }
@@ -131,4 +136,29 @@ button{
     background-color: #d1a400;
 }
 
+h1 button{
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #3A5CA4;
+    letter-spacing: 5px;
+    box-shadow: 10px 10px #3A5CA4;
+    font-size: 30px;
+    padding: 35px;
+    background-color: #FFC905;
+    box-sizing: border-box;
+    border-radius: 180px;
+    border: none;
+    justify-content: center;
+    display: flex;
+}
 
+.inicio{
+    margin: 80px;
+}
+
+.inicio button{
+    color:#3A5CA4 ;
+}
+
+.pok{
+    width: 700px;
+}
