@@ -13,6 +13,7 @@ function QuizSenac() {
     const [p7, setP7] = useState(0)
     const [p8, setP8] = useState(0)
     const [p9, setP9] = useState(0)
+    const [p10, setP10] = useState(0)
 
     const [selecionado, setSelecionado] = useState(["", "", "", ""])
 
@@ -25,6 +26,7 @@ function QuizSenac() {
     const [showP7, setShowP7] = useState(false)
     const [showP8, setShowP8] = useState(false)
     const [showP9, setShowP9] = useState(false)
+    const [showP10, setShowP10] = useState(false)
 
     const [showImagem1, setShowImagem1] = useState(false)
     const [showImagem2, setShowImagem2] = useState(false)
@@ -35,6 +37,7 @@ function QuizSenac() {
     const [showImagem7, setShowImagem7] = useState(false)
     const [showImagem8, setShowImagem8] = useState(false)
     const [showImagem9, setShowImagem9] = useState(false)
+    const [showImagem10, setShowImagem10] = useState(false)
 
     const[inicio, setInicio] = useState(true)
 
@@ -43,7 +46,7 @@ function QuizSenac() {
     
     function pontuacao() {
 
-        setScore(p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9)
+        setScore(p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10)
 
 
     }
@@ -436,10 +439,52 @@ function QuizSenac() {
                 <h3>Suicune</h3>
                 <img className="pok" src="/imagens/suicune.png" />
                 <div>
-                    <button className="enviar" onClick={() => { setShowImagem9(false); setShowP9(false); setShowScore(true); pontuacao()}}>Próximo</button>
+                    <button className="enviar" onClick={() => { setShowImagem9(false); setShowP9(false); setShowP10(true); setShowImagem10(false)}}>Próximo</button>
                 </div>
             </div>}
             
+
+            {showP10 == true && showImagem10 == false &&
+            
+            <div className="alinha-imagem">
+            <img className="pok" src="/imagens/pumkaboo-s.png" />
+            <img src="/imagens/quizhead1.png" width="700px" />
+            <br />
+
+            <div className="container">
+                <div className="opcao">
+                    <button name="p10" className={selecionado[0]} onClick={() => { setP10(0); setSelecionado(["selecionado", "", "", ""]) }}> Bulbasaur </button>
+                </div>
+                <div className="opcao">
+                    <button name="p10" className={selecionado[1]} onClick={() => { setP10(0); setSelecionado(["", "selecionado", "", ""]) }}> Bounsweet </button>
+                </div>
+                <div className="opcao">
+                    <button name="p10" className={selecionado[2]} onClick={() => { setP10(0); setSelecionado(["", "", "selecionado", ""]) }}> Howlet </button>
+                </div>
+                <div className="opcao">
+                    <button name="p10" className={selecionado[3]} onClick={() => { setP10(1); setSelecionado(["", "", "", "selecionado"]) }}> Pumpkaboo </button>
+                </div>
+                <br />
+
+            </div>
+
+            <button className="enviar" onClick={() => { setShowImagem10(true) }}>Enviar</button>
+        </div>
+
+}
+
+
+            {show10 == true && showImagem10 == true &&
+
+            <div className="alinha-imagem">
+                <h3>Suicune</h3>
+                <img className="pok" src="/imagens/pumkaboo.png" />
+                <div>
+                    <button className="enviar" onClick={() => { setShowImagem10(false); setShowP10(false); setShowScore(true); pontuacao()}}>Próximo</button>
+                </div>
+            </div>}
+
+
             {showScore == true &&
                 <div>
                     <h1>Qual é esse POKÉMON?</h1>

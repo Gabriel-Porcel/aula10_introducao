@@ -54,6 +54,7 @@ function Quiz2() {
                         <h2>Qual a cor de cabelo do cavalo branco de Napoleãum?</h2>
                         <label> <input name="p1" type="radio" onChange={ ()=> setP1(0) } /> Preto </label>
                         <br/>
+                     
                         <label> <input name="p1" type="radio" onChange={ ()=> setP1(0) } /> Azul </label>
                         <br/>
                         <label> <input name="p1" type="radio" onChange={ ()=> setP1(0) } /> Branco </label>
